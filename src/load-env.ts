@@ -8,4 +8,3 @@ const loadEnv = (): Env => {
 };
 
 export const env = loadEnv();
-
