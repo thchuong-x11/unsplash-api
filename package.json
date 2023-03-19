@@ -4,7 +4,7 @@
     "build": "npx tsc",
     "start": "node --es-module-specifier-resolution=node dist/app.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q --es-module-specifier-resolution=node dist/app.js\"",
-    "test": "jest",
+    "test": "jest --coverage",
     "prettier": "prettier --write ."
   },
   "devDependencies": {
@@ -23,6 +23,7 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
+    "@google-cloud/vision": "^3.1.2",
     "class-validator": "^0.14.0",
     "express": "^4.18.2",
     "node-fetch": "^3.3.1",

@@ -2,5 +2,8 @@
   "port": "8000",
   "unsplash": {
     "accessKey": ""
+  },
+  "googleVision": {
+    "keyFilePath": ""
   }
 }

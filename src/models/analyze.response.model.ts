@@ -6,6 +6,7 @@ export interface MatchedPhotoInfo {
 export interface AnalyzeSuccessResponseModel {
   success: true;
   keyword: string;
+  total: number;
   matches: Array<MatchedPhotoInfo>;
 }
 

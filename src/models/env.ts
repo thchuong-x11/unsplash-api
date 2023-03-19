@@ -3,4 +3,7 @@ export interface Env {
   unsplash: {
     accessKey: string;
   };
+  googleVision: {
+    keyFilePath: string;
+  };
 }

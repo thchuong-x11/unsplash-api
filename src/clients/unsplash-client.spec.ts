@@ -41,7 +41,7 @@ describe('UnsplashClient', () => {
     });
 
     it('Should transfer all the params', async () => {
-      await client.searchPhotos(mockQuery, 2, 50);
+      await client.searchPhotos({ query: mockQuery, page: 2, perPage: 50 });
       expect(mockUnsplashApi.search.getPhotos).toBeCalledTimes(1);
       expect(mockUnsplashApi.search.getPhotos).toBeCalledWith(
         expect.objectContaining({ query: mockQuery, page: 2, perPage: 50 })

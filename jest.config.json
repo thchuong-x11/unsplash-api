@@ -1,5 +1,7 @@
 {
   "preset": "ts-jest/presets/js-with-ts",
+  "collectCoverage": true,
+  "collectCoverageFrom": ["./src/**"],
   "testEnvironment": "node",
   "testPathIgnorePatterns": ["/dist/", "/node_modules/"],
   "transformIgnorePatterns": [

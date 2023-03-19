@@ -1,6 +1,8 @@
 import { createApi } from 'unsplash-js';
 import nodeFetch from 'node-fetch';
 
+import { SearchPhotosParams } from '../models';
+
 const DEFAULT_PER_PAGE = 10;
 
 export class UnsplashClient {
@@ -13,11 +15,12 @@ export class UnsplashClient {
     });
   }
 
-  public async searchPhotos(
-    query: string,
-    page = 1,
-    perPage = DEFAULT_PER_PAGE
-  ) {
-    return this.unsplash.search.getPhotos({ query, page, perPage });
+  public async searchPhotos(params: SearchPhotosParams) {
+    const { query, page, perPage } = params;
+    return this.unsplash.search.getPhotos({
+      query,
+      page: page ?? 1,
+      perPage: perPage ?? DEFAULT_PER_PAGE,
+    });
   }
 }
