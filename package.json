@@ -2,8 +2,8 @@
   "scripts": {
     "lint": "eslint",
     "build": "npx tsc",
-    "start": "node --es-module-specifier-resolution=node dist/app.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q --es-module-specifier-resolution=node dist/app.js\"",
+    "start": "node --es-module-specifier-resolution=node dist/main.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q --es-module-specifier-resolution=node dist/main.js\"",
     "test": "jest --coverage",
     "prettier": "prettier --write ."
   },
@@ -11,6 +11,7 @@
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.3",
+    "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
     "concurrently": "^7.6.0",
@@ -19,6 +20,7 @@
     "jest": "^29.5.0",
     "nodemon": "^2.0.21",
     "prettier": "2.8.4",
+    "supertest": "^6.3.3",
     "ts-jest": "^29.0.5",
     "typescript": "^5.0.2"
   },
